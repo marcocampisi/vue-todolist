@@ -16,6 +16,15 @@
     <div id="app">
         <div class="container">
             <h1>Vue Todo List</h1>
+            
+
+            <div class="todoListContainer">
+                <ul>
+                    <li v-for="singleTodo in todos">
+                        {{ singleTodo.text }}
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="js/main.js"></script>

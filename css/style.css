@@ -1,7 +1,17 @@
 @import "reset.css";
 @import "general.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 /* MAIN */
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: rgb(255,254,241);
+    background: radial-gradient(circle, rgba(255,254,241,1) 0%, rgba(148,187,233,1) 100%);
+}
 
 #app {
     display: flex;
@@ -17,7 +27,8 @@
 }
 
 h1 {
-    margin: 20px 0;
+    margin-top: 20px;
+    font-size: 3em;
 }
 
 .striked {
@@ -27,13 +38,17 @@ h1 {
 
 .todoListContainer {
     width: 100%;
-    background-color: lightgray;
+    background-color: beige;
     border-radius: 20px;
     padding: 40px;
+    box-shadow: 2px 2px 30px gray
 }
 
 .todoListContainer > ul > li {
     list-style: none;
+}
+
+.todoListContainer > ul > li:not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -47,10 +62,22 @@ h1 {
 }
 
 form > input {
+    width: 200px;
     padding: 10px;
     margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    transition: width 0.3s ease-in-out;
+}
+
+form > input:focus {
+    width: 300px;
 }
 
 form > button {
     padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid gray;
+    cursor: pointer;
 }

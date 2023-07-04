@@ -3,6 +3,10 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            todoInput: {
+                text : '',
+                done : false
+            },
             todos : [
                 {
                     text : 'Primo Todo',
@@ -17,6 +21,14 @@ createApp({
                     done : false
                 }
             ]
+        }
+    },
+    methods : {
+        addTodo() {
+            if (this.todoInput != '') {
+                this.todos.push(this.todoInput);
+                this.todoInput = '';
+            }
         }
     }
 }).mount('#app');

@@ -17,6 +17,10 @@
         <div class="container">
             <h1>Vue Todo List</h1>
             
+            <form action="" @submit.prevent="addTodo()">
+                <input type="text" v-model="todoInput.text" placeholder="Inserisci un todo...">
+                <button>Aggiungi</button>
+            </form>
 
             <div class="todoListContainer">
                 <ul>

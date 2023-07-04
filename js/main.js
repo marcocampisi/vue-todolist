@@ -27,7 +27,7 @@ createApp({
         addTodo() {
             if (this.todoInput != '') {
                 this.todos.push(this.todoInput);
-                this.todoInput = '';
+                this.todoInput.text = '';
             }
         }
     }

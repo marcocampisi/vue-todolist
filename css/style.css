@@ -1,2 +1,11 @@
 @import "reset.css";
 @import "general.css";
+
+/* MAIN */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+}

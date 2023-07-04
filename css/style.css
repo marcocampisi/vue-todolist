@@ -24,10 +24,23 @@ h1 {
     width: 100%;
     background-color: lightgray;
     border-radius: 20px;
-    padding: 40px 20px;
+    padding: 40px;
 }
 
 .todoListContainer > ul > li {
     list-style: none;
     margin-bottom: 20px;
+}
+
+.container > form {
+    margin: 20px 0;
+}
+
+form > input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+form > button {
+    padding: 10px;
 }

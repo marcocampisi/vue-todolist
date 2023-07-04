@@ -25,10 +25,16 @@ createApp({
     },
     methods : {
         addTodo() {
-            if (this.todoInput != '') {
-                this.todos.push(this.todoInput);
+            if (this.todoInput.text.trim() !== '') {
+                this.todos.push({
+                    text : this.todoInput.text,
+                    done : this.todoInput.done
+                });
                 this.todoInput.text = '';
             }
+        },
+        removeTodo(index) {
+            this.todos.splice(index, 1);
         }
     }
 }).mount('#app');

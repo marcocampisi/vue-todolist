@@ -18,16 +18,20 @@
             <h1>Vue Todo List</h1>
             
             <form action="" @submit.prevent="addTodo()">
-                <input type="text" v-model="todoInput.text" placeholder="Inserisci un todo...">
+                <input required type="text" v-model="todoInput.text" placeholder="Inserisci un todo...">
                 <button>Aggiungi</button>
             </form>
 
             <div class="todoListContainer">
-                <ul>
-                    <li v-for="singleTodo in todos">
+                <ul v-if="todos.length > 0">
+                    <li v-for="(singleTodo, i) in todos">
                         {{ singleTodo.text }}
+                        <span @click="removeTodo(i)"> X </span>
                     </li>
                 </ul>
+                <div v-else>
+                    Non ci sono todo
+                </div>
             </div>
         </div>
     </div>

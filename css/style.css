@@ -20,6 +20,11 @@ h1 {
     margin: 20px 0;
 }
 
+.striked {
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
 .todoListContainer {
     width: 100%;
     background-color: lightgray;
@@ -30,6 +35,11 @@ h1 {
 .todoListContainer > ul > li {
     list-style: none;
     margin-bottom: 20px;
+}
+
+.todoListContainer > ul > li > span {
+    margin: 0 5px;
+    cursor: pointer;
 }
 
 .container > form {

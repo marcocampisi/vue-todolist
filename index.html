@@ -24,9 +24,10 @@
 
             <div class="todoListContainer">
                 <ul v-if="todos.length > 0">
-                    <li v-for="(singleTodo, i) in todos">
+                    <li v-for="(singleTodo, i) in todos" :class="{'striked' : singleTodo.done}">
                         {{ singleTodo.text }}
-                        <span @click="removeTodo(i)"> X </span>
+                        <span @click="removeTodo(i)"> <i class="fas fa-circle-xmark"></i> </span>
+                        <span @click="markTodoDone(singleTodo)"> <i class="fas fa-check-circle"></i> </span>
                     </li>
                 </ul>
                 <div v-else>

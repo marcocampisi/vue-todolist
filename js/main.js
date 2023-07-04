@@ -35,6 +35,9 @@ createApp({
         },
         removeTodo(index) {
             this.todos.splice(index, 1);
+        },
+        markTodoDone(todo) {
+            todo.done = !todo.done;
         }
     }
 }).mount('#app');

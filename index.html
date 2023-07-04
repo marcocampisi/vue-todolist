@@ -17,7 +17,7 @@
         <div class="container">
             <h1>Vue Todo List</h1>
             
-            <form action="" @submit.prevent="addTodo()">
+            <form action="" @submit.prevent="addTodo()" @keydown.enter.prevent="addTodo()">
                 <input required type="text" v-model="todoInput.text" placeholder="Inserisci un todo...">
                 <button>Aggiungi</button>
             </form>
